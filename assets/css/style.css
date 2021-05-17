@@ -1,1 +1,340 @@
 @charset "utf-8";
+
+/* ====================== 共通 ============================*/
+.is-halfWidth {
+  width: 50%;
+}
+
+.is-fullWidth {
+  width: 100%;
+}
+
+.button {
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  transition: .3s;
+  padding: 13px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.label-text {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #545658;
+}
+
+.alert {
+  color: #dd4b39;
+}
+
+.input-init {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.input-area {
+  box-sizing: border-box;
+  height: 36px;
+  width: 100%;
+  padding: 5px;
+  color: #545658;
+  font-size: 13px;
+  line-height: 2;
+  background-color: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+}
+
+.input-area:focus {
+  background-color: #fff;
+  border-color: rgba(59, 133, 133, .4);
+  box-shadow: 0 0 0 2px rgb(1 191 189 / 10%);
+}
+
+.link-color {
+  color: #01a6a4;
+}
+
+.link-color:hover {
+  color: #01bfbd;
+}
+
+/* ====================== メイン =========================*/
+.wrapper {
+  padding: 32px 0;
+  width: 100%;
+  background-color: #f2f6f7;
+}
+
+.inner {
+  margin: 0 auto;
+  width: 640px;
+}
+
+.form-content {
+  box-sizing: border-box;
+  margin-bottom: 32px;
+  padding: 48px 64px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0 rgb(0 0 0 / 18%);
+}
+
+.form-content__title {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #545658;
+  font-size: 24px;
+}
+
+.form-content__start {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.start-button:last-child {
+  margin-left: 8px;
+}
+
+.start-button__init {
+  text-decoration: none;
+}
+
+.is-facebook {
+  color: #fff;
+  background-color: #3b5999;
+  border-color: #3b5999;
+}
+
+.is-facebook:hover {
+  background-color: #344e87;
+  border-color: transparent;
+}
+
+.is-google {
+  color: #dd4b39;
+  background-color: #fff;
+}
+
+.is-google:hover {
+  background-color: #f7f7f7;
+}
+
+.form-content__supplement {
+  text-align: center;
+}
+
+.is-defaultText {
+  color: #949697;
+  font-size: 12px;
+}
+
+.form-content__divider {
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.form-content__divider::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  width: 100%;
+  background-color: #ececec;
+}
+
+.form-content__divider p {
+  display: inline-block;
+  position: relative;
+  padding: 0 10px;
+  background-color: #fff;
+}
+
+/* ====================== 名前 ==========================*/
+.name-wrap {
+  display: flex;
+}
+
+.name-wrap__box {
+  margin-left: 16px;
+}
+
+.name-wrap__box:first-child {
+  margin-left: 0;
+}
+
+/* ===================== 性別 ==========================*/
+.gender-contents {
+  display: flex;
+  color: #545658;
+  font-size: 16px;
+}
+
+.gender-contents__content {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.gender-contents__content:first-child {
+  margin-left: 0;
+}
+
+.gender-contents__content input, .courses input {
+  display: none;
+}
+
+.gender-contents__content span {
+  position: relative;
+  display: inline-block;
+  padding: 3px 3px 3px 20px;
+}
+
+.gender-contents__content span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 14px;
+  width: 14px;
+  background-color: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+}
+
+.gender-input:checked + span::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  height: 8px;
+  width: 8px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #01bfbd;
+}
+
+/* ====================== 出身 ============================*/
+.origin-wrap {
+  position: relative;
+}
+
+.origin-wrap::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  transform: rotate(45deg);
+  height: 5px;
+  width: 5px;
+  border-right: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.origin-wrap__select:focus {
+  background-color: #fbfbfb;
+  border-color: #d9d9d9;
+  box-shadow: initial;
+}
+/* ====================== 希望コース ========================*/
+.course {
+  margin-bottom: 10px;
+  color: #545658;
+  font-size: 16px;
+}
+
+.course__text {
+  position: relative;
+  padding-left: 25px;
+}
+
+.course__text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 15px;
+  width: 15px;
+  margin-top: -8px;
+  border: 1px solid #d9d9d9;
+}
+
+.course input:checked + .course__text::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: rotate(45deg);
+  height: 16px;
+  width: 8px;
+  margin-top: -12px;
+  border-right: 3px solid #01bfbd;
+  border-bottom: 3px solid #01bfbd;
+}
+
+/* ====================== 備考 ============================*/
+.remarks .input-area {
+  height: 100px;
+}
+
+/* ====================== 送信ボタン =======================*/
+.submit-btn {
+  padding: 13px;
+  background-color: #01bfbd;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  background-color: #01a6a4;
+}
+
+.submit-btn:active {
+  background-color: #fff;
+  color: #01a6a4;
+  border: 1px solid #d9d9d9;
+}
+
+.agreement-text {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* ==================== フッター部分 =========================*/
+.quest-block {
+  text-align: center;
+}
+
+.quest-block p, .quest-block__mail {
+  margin-bottom: 8px;
+  line-height: 16px;
+  font-size: 12px;
+}
+
+.quest-block__mail {
+  display: inline-block;
+}
+
+.quest-block a:hover {
+  box-sizing: border-box;
+  border-bottom: 1px solid #ececec;
+  border-bottom-color: #01bfbd;
+}
